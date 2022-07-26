@@ -1,4 +1,6 @@
 import {LitElement, css, html} from 'lit'
+import Video from './components/video'
+import Chat from './components/chat'
 
 export class App extends LitElement {
   static properties = {
@@ -6,7 +8,6 @@ export class App extends LitElement {
 
   static styles = css`
     :host {
-      font-size: 32px;
       font-family: sans-serif;
     }
   `
@@ -17,10 +18,12 @@ export class App extends LitElement {
   render() {
     return html`
       <section>
-        <h1>Hello World!</h1>
+        <h1>LiveText!</h1>
+        <video-livetext></video-livetext>
+        <chat-livetext></chat-livetext>
       </section>
     `
   }
 }
 
-customElements.define('my-app', App)
+customElements.define('livetext-app', App)
